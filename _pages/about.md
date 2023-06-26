@@ -8,11 +8,9 @@ redirect_from:
   - /about.html
 ---
 ## Daniel(Haolin) Jin
-I am currently a MS CS student studying at NYU. Graduated from Rutgers University in 2023 with double major in Computer Science and Mathematic and a minor in linguistic 
+I am currently a MS CS student studying at NYU. Graduated from Rutgers University in 2023 with double major in Computer Science and Mathematic and a minor in linguistic
 
 Languages:
-
-<div align="left">
 
 | Skill       | Level         | Experience |
 |:------------|:-------------:|-----------:|
@@ -25,4 +23,3 @@ Languages:
 | C++         | Intermediate  | 2 years    |
 | Linux       | Intermediate  | 2 years    |
 | Git         | Intermediate  | 2 years    |
-</div>
