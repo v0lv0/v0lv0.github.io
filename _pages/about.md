@@ -9,28 +9,31 @@ redirect_from:
 ---
 # Daniel(Haolin) Jin
 
-I am a MS CS student at NYU Courant. Graduated from Rutgers University in 2023 with double major in Computer Science and Mathematic and a minor in linguistic.
+I am currently studying for a MS degree in Computer Science at NYU Courant. I recently completed my undergraduate studies at Rutgers University, where I completed a BS degree with major in Computer Science, General Mathematics and a minor in Linguistics. I am genuinely passionate to explore the beauty of logic and mathematics, and I am excited to continue pursuing into these subjects during my academic journey.
 
 ## Interests
 
 + Mathematical logic
-+ Verification
 + Proof assistant
 + Graph algorithm
++ Verification
 + Formal language
 
 ## (Programming) languages
 
-| Skill       | Level         | Experience |
-|:------------|:-------------:|-----------:|
-| Java        | Advanced      | 4 years    |
-| Python      | Advanced      | 4 years    |
-| C           | Advanced      | 3 years    |
-| Ocaml       | Advanced      | 2 years    |
-| &#92;( \LaTeX &#92;) |Advanced| 3 years |
-| Coq         | Intermediate  | 3 years |
-| LEAN        | Intermediate  | 3 years |
-| Markdown    | Intermediate  | 3 years    |
-| C++         | Intermediate  | 2 years    |
-| Linux       | Intermediate  | 2 years    |
-| Git         | Intermediate  | 2 years    |
+| Skill       | Level         |
+|:------------|:-------------:|
+| Java        | Advanced      |
+| Python      | Advanced      |
+| C           | Advanced      |
+| &#92;( \LaTeX &#92;) |Advanced|
+| Ocaml       | Intermediate  |
+| Coq         | Intermediate  |
+| LEAN        | Intermediate  |
+| Markdown    | Intermediate  |
+| C++         | Intermediate  |
+| Linux       | Intermediate  |
+| Git         | Intermediate  |
+| English     | bilingual     |
+| Mandarin    | bilingual     |
+| Japanese    | Novice        |
