@@ -1,13 +1,12 @@
 ---
 permalink: /
-title: "About me"
+title: "Daniel(Haolin) Jin"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-# Daniel(Haolin) Jin
 
 I am currently studying for a MS degree in Computer Science at NYU Courant. I recently completed my undergraduate studies at Rutgers University, where I completed a BS degree with major in Computer Science, General Mathematics and a minor in Linguistics. I am genuinely passionate to explore the beauty of logic and mathematics, and I am excited to continue pursuing into these subjects during my academic journey.
 

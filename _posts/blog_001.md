@@ -1,0 +1,9 @@
+---
+title: 'First blog '
+date: 2023-06-26
+permalink: /posts/001
+tags:
+  - cool posts
+---
+
+This is the first blog post, I want to use the blog section to share some cool stuff, but mostly to force myself to learn stuff.
