@@ -8,15 +8,23 @@ redirect_from:
   - /about.html
 ---
 
-I am currently studying for a MS degree in Computer Science at NYU Courant. I recently completed my undergraduate studies at Rutgers University, where I completed a BS degree with major in Computer Science, General Mathematics and a minor in Linguistics. I am genuinely passionate to explore the beauty of logic and mathematics, and I am excited to continue pursuing into these subjects during my academic journey.
+# About Me
+Hi there, my name is Daniel Jin(金). I am currently pursuing an **M.S. in Computer Science** at **NYU Courant**, having completed my undergraduate studies at **Rutgers University** with a **double major in Computer Science and Mathematics** and a **minor in Linguistics**.
+
+I am passionate about **"making sense"**. Which (un?)luckily has becoming more important and difficult in the recent years with the advancement of generative AI; As these models operate in ways that often feel like a **black box**, my goal is not just to use AI effectively but to **understand and explain** its inner workings.
+
+This passion for making sense has led me to develop a diversed background, including **computational linguistics, formal language theory, compilers, algorithms (especially graph theory), NLP, AI, and predictive analytics**.
+
+Notably, I have been teaching computer science at the university level since 2019, thanks to the awsome [Learning Assistant (LA) Program](https://ceils.ucla.edu/learning-communities-trainings/learning-assistant-program/). Since then, I have led recitation sections, designed course materials for **intro to computer science and data structures**. Which has helped thousands of students to the path of computer science.
+
+As today, I thrive at the intersection of **AI, NLP, and computational linguistics**, aiming not only to use the technology but also to **explain them**.
 
 ## Interests
 
-+ Mathematical logic
-+ Proof assistant
-+ Graph algorithm
-+ Verification
++ NLP/AI
++ Algorithm
 + Formal language
++ Mathematical logic
 
 ## (Programming) languages
 
