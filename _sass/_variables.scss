@@ -47,18 +47,20 @@ $type-size-8                : 0.625em;  // ~10px
    Colors
    ========================================================================== */
 
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
+// Dark mode: the gray ramp is inverted so the "dark" grays (used for text) read
+// light and the "light" grays (used for surfaces/borders) read dark.
+$gray                       : #9aa0a6;
+$dark-gray                  : mix(#fff, $gray, 32%);  // light  -> body text
+$darker-gray                : mix(#fff, $gray, 62%);  // lighter -> headings/strong
+$light-gray                 : mix(#000, $gray, 42%);  // dark   -> subtle surfaces
+$lighter-gray               : mix(#000, $gray, 66%);  // darker -> backgrounds/borders
 
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
-$code-background-color-dark : $light-gray;
+$body-color                 : #15171c;
+$background-color           : #15171c;
+$code-background-color      : #1e2127;
+$code-background-color-dark : #23262d;
 $text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
+$border-color               : mix(#000, $gray, 55%);
 
 $primary-color              : #7a8288;
 $success-color              : #62c462;
@@ -91,10 +93,10 @@ $xing-color                 : #006567;
 
 /* links */
 $link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
-$masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
+$link-color-hover           : mix(#fff, $link-color, 25%);  // lighten on dark
+$link-color-visited         : mix(#fff, $link-color, 40%);
+$masthead-link-color        : $dark-gray;                   // light on dark masthead
+$masthead-link-color-hover  : $darker-gray;
 
 
 /*

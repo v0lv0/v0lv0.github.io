@@ -39,3 +39,28 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+/* ==========================================================================
+   Dark mode surface fixes — override hardcoded #fff backgrounds in dropdowns
+   and the author-profile menu so they match the dark theme.
+   ========================================================================== */
+.greedy-nav .hidden-links,
+.author__urls,
+.toc, .toc .nav__title,
+.modal {
+  background: $code-background-color;
+  border-color: $border-color;
+}
+.greedy-nav .hidden-links:before { border-bottom-color: $border-color; }
+.greedy-nav .hidden-links:after  { border-bottom-color: $code-background-color; }
+
+/* Code blocks / highlight surfaces */
+div.highlighter-rouge, figure.highlight, pre.highlight, .highlight {
+  background-color: $code-background-color;
+}
+
+/* Form fields (search, etc.) */
+input, select, textarea, .search-content__inner input {
+  background-color: $code-background-color;
+  color: $text-color;
+  border-color: $border-color;
+}
