@@ -1,0 +1,378 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=1 cm, % seperation between body and page edge from the top
+    bottom=1 cm, % seperation between body and page edge from the bottom
+    left=1.5 cm, % seperation between body and page edge from the left
+    right=1.5 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Daniel Jin's CV},
+    pdfauthor={Daniel Jin},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column separation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.2 cm
+}{
+    % bottom space:
+    0.15 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.05 cm,
+        parsep=0.05 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Daniel Jin
+
+        \vspace{4 pt}
+
+        \normalsize
+        \mbox{New York City, New York}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{mailto:daniel.jin@nyu.edu}{Daniel.Jin@nyu.edu}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{tel:6092138799}{(609)-213-8799}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://v0lv0.github.io}{\color{blue}\underline{Personal Website}}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/daniel-h-jin}
+                {\color{blue}\underline{Linkedin}}
+            }%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://github.com/v0lv0}{\color{blue}\underline{Github}}}%
+    \end{header}
+    
+    
+    % \section{Summary}
+    % \begin{onecolentry}
+    %     NYU Computer Science Master's student with a passion for \textbf{AI, mathematical problem-solving, and programming}. \\
+    %     \vspace{2 pt}
+    %     Teaching and designing curricula for computer science courses for over 5 years, specializing in data structures and algorithms. And very familar with fundation of programming languages.
+    %     \vspace{2 pt}
+    %     Worked as a \textbf{AI Product Manager} at \textbf{Baidu} (\$32B AI leader), leading LLM-powered business intelligence tools.\\
+    % \end{onecolentry}
+    
+    \section{Summary}
+    \begin{onecolentry}
+        \large Full-stack software engineer with production experience in \textbf{distributed systems and data pipelines}. Built Temporal-based workflow infrastructure and financial data ingestion systems processing 6,000+ daily queries. Strong background in ML, algorithms, and systems design.\normalsize
+    \end{onecolentry}
+    
+    \vspace{5 pt - 0.3 cm}
+
+    \section{Education}
+
+
+
+        
+        \begin{twocolentry}{
+            Sep 2023 – May 2025
+        }
+            \textbf{New York University} (GPA: 3.632/4.0) \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{itemize}[
+                    topsep=0.03 cm,
+                    parsep=0.05 cm,
+                    partopsep=0pt,
+                    itemsep=0pt,
+                    leftmargin=0 cm + 10pt
+                ]
+                \item[] Master's in \textbf{Computer Science} at Courant Institute of Mathematical Sciences
+                \item[] Coursework: Machine Learning, NLP, Distributed Systems, Operating Systems, Compiler, Algorithms
+            \end{itemize}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+            Sep 2019 – May 2023
+        }
+            \textbf{Rutgers, The State University of New Jersey} (GPA: 3.727/4.0) \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{itemize}[
+                    topsep=0.05 cm,
+                    parsep=0.05 cm,
+                    partopsep=0pt,
+                    itemsep=0pt,
+                    leftmargin=0 cm + 10pt
+                ]
+                \item[] Double major in \textbf{Computer Science}, \textbf{Mathematics}, minor in \textbf{Linguistics}, Graduated with great distinction
+            \end{itemize}
+        \end{onecolentry}
+
+    % \section{123}
+
+
+
+        
+    %     \begin{onecolentry}
+    %         \href{https://github.com/sinaatalay/rendercv}{RenderCV} is a LaTeX-based CV/resume framework. It allows you to create a high-quality CV or resume as a PDF file from a YAML file, with \textbf{full Markdown syntax support} and \textbf{complete control over the LaTeX code}.
+    %     \end{onecolentry}
+
+    %     \vspace{0.2 cm}
+
+    %     \begin{onecolentry}
+    %         The boilerplate content is taken from \href{https://github.com/dnl-blkv/mcdowell-cv}{here}, where a \textit{clean and tidy CV} pattern is proposed by \textbf{\href{https://www.gayle.com/}{Gayle Laakmann McDowell}}.
+    %     \end{onecolentry}
+
+
+    
+    % \section{Quick Guide}
+
+    % \begin{onecolentry}
+    %     \begin{highlightsforbulletentries}
+
+
+    %     \item Each section title is arbitrary, and each section contains a list of entries.
+
+    %     \item There are 7 unique entry types: \textit{BulletEntry}, \textit{TextEntry}, \textit{EducationEntry}, \textit{ExperienceEntry}, \textit{NormalEntry}, \textit{PublicationEntry}, and \textit{OneLineEntry}.
+
+    %     \item Select a section title, pick an entry type, and stasrt writing your section!
+
+    %     \item \href{https://docs.rendercv.com/user_guide/}{Here}, you can find a comprehensive user guide for RenderCV.
+
+
+    %     \end{highlightsforbulletentries}
+    % \end{onecolentry}
+
+
+    \section{Skills}
+
+        \begin{onecolentry}
+            \textbf{Programming Languages:}  Java, Python, C, C++, OCaml, JavaScript, TypeScript, Go, \LaTeX, SQL, Coq, L$\exists\forall$N
+        \end{onecolentry}
+        \vspace{0.08 cm}
+        \begin{onecolentry}
+            \textbf{Tools:} React, Node.js, gRPC, Prisma, Temporal, GCP, Kubernetes, MySQL, Grafana, PyTorch, Flask, JUnit, ROS
+        \end{onecolentry}
+        \vspace{0.08 cm}
+        \begin{onecolentry}
+            \textbf{Specialized Skills:} Machine Learning, NLP, Compiler Design, Formal Verification, Unit Testing, Distributed Systems
+        \end{onecolentry}
+    \section{Experience}
+        \begin{twocolentry}
+            {May 2025 – Present}
+            \textbf{Full-Stack Software Engineer}, Project Pluto (\hrefWithoutArrow{https://terminal-x.ai}{\color{blue}\underline{Terminal X}}) -- New York City, NY
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Overhauled Temporal distributed workflow engine — upgraded library, fixed activity termination propagation, and implemented timeout hierarchy; reduced infrastructure costs by 75\% through workflow optimizations
+                \item Built automated data ingestion pipelines for 10+ financial sources (SEC, Green Street, thefly, Quartr) with real-time monitoring dashboards, supporting 6,000+ queries per day
+                \item Led v2 frontend implementation — rebuilt the entire platform UI including landing page, answer page, source table, data room, and chat interface across the full stack (React, Node.js, gRPC, Prisma)
+                \item Executed zero-downtime database migrations on production MySQL
+            \end{highlights}
+        \end{onecolentry}
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Jun 2024 – Aug 2024
+        }
+            \textbf{Product Management Intern}, Baidu -- Beijing\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Worked cross-functionally with engineering and data teams at a \$32B AI company to ship an LLM-powered natural language SQL product for enterprise business intelligence
+                \item Designed and monitored production integration with AppBuilder, Baidu's internal LLM platform, coordinating with engineers on API contracts and rollout
+                \item Managed delivery of 5 customer-facing products, reducing time-to-delivery by 40\% through cross-team coordination
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Projects}
+        \begin{onecolentry}
+            \textbf{Transit-Driven Retail} — AI model predicting NYC retail vacancies using transit and crime data \hfill \textit{2024}
+        \end{onecolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \textbf{MiniOO} (\href{https://github.com/v0lv0/minioo.git}{\color{blue}{github}}) — OO interpreter with type checking in OCaml \hfill \textit{2023}
+        \end{onecolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \textbf{BMRSs for Phonological Analysis} (\href{https://github.com/rucll/bmrs}{\color{blue}{github}}) — presented at AMP 2022, UCLA \hfill \textit{2021–2023}
+        \end{onecolentry}
+
+    \section{Teaching}
+        \begin{twocolentry}
+            {Sep 2023 – May 2025}
+            \textbf{Data Structure Course Assistant}, New York University -- New York City, NY
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed unit testing tools using JUnit in Java and shell, used to grade 800+ students' assignments per semester
+                \item Independently led recitations and office hours for 60+ students per semester, with 100\% positive feedback
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}
+            {Sep 2020 – Dec 2023}
+            \textbf{Intro to CS Head TA}, Rutgers University -- New Brunswick, NJ
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed all recitation materials for a 1000+ student intro CS course in Java and led weekly sections
+                \item Trained and managed 30+ section leaders per semester, fostering consistent and effective teaching among all sections
+            \end{highlights}
+        \end{onecolentry}
+    
+    \section{Achievements}
+        \begin{onecolentry}
+            \begin{highlightsforbulletentries}
+                \item 2nd place, 2020 Princeton Micro-mouse Competition (East Coast) — Rutgers IEEE Robotics Team
+                \item Built autonomous vehicle for IGVC; trained obstacle detection models in ROS — Rutgers IEEE
+            \end{highlightsforbulletentries}
+        \end{onecolentry}
+        
+        
+
+
+
+\end{document}

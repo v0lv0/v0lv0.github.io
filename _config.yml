@@ -142,6 +142,7 @@ exclude:
   - config
   - gulpfile.js
   - log
+  - resume-source
   - node_modules
   - package.json
   - tmp
