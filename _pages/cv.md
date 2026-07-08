@@ -9,89 +9,62 @@ redirect_from:
 
 {% include base_path %}
 
+[Download resume (PDF)]({{ base_path }}/files/main.pdf){: .btn .btn--primary}
+
+Summary
+======
+Full-stack software engineer with production experience in distributed systems and data pipelines. Built Temporal-based workflow infrastructure and financial data ingestion systems processing 6,000+ daily queries. Strong background in ML, algorithms, and systems design.
+
 Education
 ======
-* **M.S. in Computer Science**, New York University, Courant Institute (2023 – 2025)
-* **B.S. in Computer Science & Mathematics**, Rutgers University (2019 – 2023)
-  * Minor in Linguistics
+* **M.S. in Computer Science**, New York University, Courant Institute of Mathematical Sciences (Sep 2023 – May 2025), GPA: 3.632/4.0
+  * Coursework: Machine Learning, NLP, Distributed Systems, Operating Systems, Compilers, Algorithms
+* **B.S. in Computer Science & Mathematics**, Rutgers University (Sep 2019 – May 2023), GPA: 3.727/4.0
+  * Minor in Linguistics, graduated with great distinction
 
 Work experience
 ======
-* **2023 – Present: Data Structures Course Assistant**
-  * New York University
-  * Led recitations and office hours for 60+ students per semester with 100% positive feedback
-  * Developed automated grading tools used by over 800 students
+* **May 2025 – Present: Full-Stack Software Engineer, Project Pluto (Terminal X)** – New York City, NY
+  * Overhauled Temporal distributed workflow engine — upgraded library, fixed activity termination propagation, and implemented timeout hierarchy; reduced infrastructure costs by 75% through workflow optimizations
+  * Built automated data ingestion pipelines for 10+ financial sources (SEC, Green Street, thefly, Quartr) with real-time monitoring dashboards, supporting 6,000+ queries per day
+  * Led v2 frontend implementation — rebuilt the entire platform UI including landing page, answer page, source table, data room, and chat interface across the full stack (React, Node.js, gRPC, Prisma)
+  * Executed zero-downtime database migrations on production MySQL
 
-* **2024 Summer: Product Management Intern**
-  * Baidu
-  * Worked on an LLM-powered AI business intelligence platform for natural language SQL queries
-  * Managed integration with AppBuilder and streamlined product delivery, reducing time by 40%
-
-* **2020 – 2023: Head TA for Intro to Computer Science**
-  * Rutgers University
-  * Oversaw a class of 1000+ students, designed recitation materials, and trained 30+ section leaders
-  * Received outstanding student feedback in university-wide surveys
+* **Jun 2024 – Aug 2024: Product Management Intern**, Baidu – Beijing
+  * Worked cross-functionally with engineering and data teams at a $32B AI company to ship an LLM-powered natural language SQL product for enterprise business intelligence
+  * Designed and monitored production integration with AppBuilder, Baidu's internal LLM platform, coordinating with engineers on API contracts and rollout
+  * Managed delivery of 5 customer-facing products, reducing time-to-delivery by 40% through cross-team coordination
 
 Projects
 ======
-* **Transit-Driven Retail Vacancy Prediction**
-  * Analyzed NYC public transit, crime data, and retail vacancies using AI models in Python & RapidMiner
+* **Transit-Driven Retail Vacancy Prediction** (2024)
+  * AI model predicting NYC retail vacancies using transit and crime data in Python & RapidMiner
   * Achieved prediction accuracy within a margin of fewer than 12 stores per area
 
-* **MiniOO (github.com/v0lv0/minioo.git)**
-  * Developed an object-oriented programming language interpreter in OCaml using Menhir and Ocamllex
+* **MiniOO** (github.com/v0lv0/minioo.git) (2023)
+  * Object-oriented programming language interpreter with type checking, built in OCaml using Menhir and Ocamllex
 
-* **BMRS Transducer for Computational Phonology (github.com/rucll/bmrs)**
-  * Designed a BMRS-based transducer in Python to model phonological transformations
+* **BMRSs for Phonological Analysis** (github.com/rucll/bmrs) (2021 – 2023)
+  * BMRS-based transducer in Python to model phonological transformations
   * Presented at the **Annual Meeting on Phonology 2022, UCLA**
 
 Skills
 ======
-* **Programming Languages:** Java, Python, C, C++, OCaml, SQL, JSON, Coq, LaTeX, Elixir  
-* **Technical Tools:** PyTorch, Git, Flask, Node.js, Iris, RapidMiner, Linux, ROS  
-* **Specialized Knowledge:** Machine Learning, NLP, Compiler Theory, Graph Algorithms, Predictive Analytics  
-<!-- 
-Publications
-======
-<ul>{% for post in site.publications %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
-
-Talks
-======
-<ul>{% for post in site.talks %}
-  {% include archive-single-talk-cv.html %}
-{% endfor %}</ul> -->
+* **Programming Languages:** Java, Python, C, C++, OCaml, JavaScript, TypeScript, Go, LaTeX, SQL, Coq, LEAN
+* **Tools:** React, Node.js, gRPC, Prisma, Temporal, GCP, Kubernetes, MySQL, Grafana, PyTorch, Flask, JUnit, ROS
+* **Specialized Skills:** Machine Learning, NLP, Compiler Design, Formal Verification, Unit Testing, Distributed Systems
 
 Teaching
 ======
-* **2023 – Present: Data Structures Course Assistant**
-  * New York University
-  * Led recitations, office hours, and review sessions for 60+ students per semester
-  * Developed automated grading tools in Java and Shell, used by over 800 students
+* **Sep 2023 – May 2025: Data Structures Course Assistant**, New York University – New York City, NY
+  * Developed unit testing tools using JUnit in Java and shell, used to grade 800+ students' assignments per semester
+  * Independently led recitations and office hours for 60+ students per semester, with 100% positive feedback
 
-* **2020 – 2023: Head TA for Intro to Computer Science**
-  * Rutgers University
-  * Designed and delivered recitations for a class of 1000+ students
-  * Trained and mentored 30+ section leaders to ensure effective teaching
-  * Received exceptional student feedback in anonymous surveys
+* **Sep 2020 – Dec 2023: Intro to CS Head TA**, Rutgers University – New Brunswick, NJ
+  * Designed all recitation materials for a 1000+ student intro CS course in Java and led weekly sections
+  * Trained and managed 30+ section leaders per semester, fostering consistent and effective teaching among all sections
 
-* **2019 – 2020: Learning Assistant for Computer Science**
-  * Rutgers University
-  * Selected for the [Learning Assistant (LA) Program](https://ceils.ucla.edu/learning-communities-trainings/learning-assistant-program/)
-  * Assisted students in understanding core programming concepts through interactive problem-solving
-  * Supported professors in designing class activities and mentoring students in introductory CS courses
-
-Service and leadership
+Achievements
 ======
-* **Rutgers IEEE Executive Board (2020 – 2023)**
-  * Managed lab resources, including servers, 3D printers, and robotics equipment
-  * Led weekly meetings and events for 1000+ members
-
-* **Rutgers IEEE Robotics Team**
-  * Algorithm instructor for Micromouse, led the team to 2nd place at the 2020 Princeton Micromouse Competition
-  * Developed AI models for obstacle detection and pathfinding in ROS
-
-* **TeamRU Backend Development**
-  * Built a serverless team-matching platform for Rutgers hackathons using Flask & MongoDB
-  * Deployed during COVID to help participants form teams and submit projects
+* 2nd place, 2020 Princeton Micro-mouse Competition (East Coast) — Rutgers IEEE Robotics Team
+* Built autonomous vehicle for IGVC; trained obstacle detection models in ROS — Rutgers IEEE
